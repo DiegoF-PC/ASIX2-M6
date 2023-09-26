@@ -1,0 +1,13 @@
+#!/bin/bash
+
+read -p"Nom de l'usuari:" usuari
+
+if id "$usuari" &>/dev/null; then
+
+  echo "Aquest son esl processos de l'usuari"
+  ps -u "$usuari"
+
+else
+    echo "Aquest usuari no existeix"
+
+fi
